@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial;
+      }
+
+      .container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f1f1f1;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .wrapper {
+        width: 400px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: space-evenly;
+      }
+
+      .row {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .winner {
+        background-color: lightgreen !important;
+      }
+
+      .cell {
+        width: 120px;
+        height: 120px;
+        border-radius: 15px;
+        background-color: #d1d1d1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        font-family: arial;
+        color: #fff;
+        font-weight: bold;
+      }
+
+      .repeat-game {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hidden {
+        visibility: hidden;
+      }
+
+      .repeat-game button {
+        padding: 5px;
+        border-radius: 15px;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        background-color: dodgerblue;
+        color: #fff;
+        font-size: 15px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">Jogo da Velha #</h1>
+      <div class="wrapper">
+        <div class="row">
+          <div class="cell" data-position="A1"></div>
+          <div class="cell" data-position="A2"></div>
+          <div class="cell" data-position="A3"></div>
+        </div>
+        <div class="row">
+          <div class="cell" data-position="B1"></div>
+          <div class="cell" data-position="B2"></div>
+          <div class="cell" data-position="B3"></div>
+        </div>
+        <div class="row">
+          <div class="cell" data-position="C1"></div>
+          <div class="cell" data-position="C2"></div>
+          <div class="cell" data-position="C3"></div>
+        </div>
+      </div>
+      <div class="repeat-game hidden">
+        <h2>Jogar Novamente?</h2>
+        <button id="reset-btn">Sim</button>
+      </div>
+    </div>
+    <script src="/index.js"></script>
+  </body>
+</html>
